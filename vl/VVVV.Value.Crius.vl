@@ -710,102 +710,10 @@
       </Node>
       <!--
 
-    ************************ Playlist ************************
-
--->
-      <Node Name="Playlist" Category="VVVV.Value.Crius" Bounds="200,100" Id="M0iMClx2OHfQTU0RoXHIk1">
-        <p:NodeReference>
-          <Choice Kind="ContainerDefinition" Name="Process" />
-          <FullNameCategoryReference ID="Primitive" />
-        </p:NodeReference>
-        <Patch Id="FSRYiPDEQeTOLYnz8BahcX">
-          <Canvas Id="TA8TFuUimKVMtjHc1tqQ1o" CanvasType="Group">
-            <ControlPoint Id="DAlvSxmBgnXOmsXSWyERub" Bounds="328,170" />
-            <ControlPoint Id="LBiLb20yAhbOossCozYTYq" Bounds="397,522" />
-            <ControlPoint Id="SVg1eAj3bFrPogZ74R1vEw" Bounds="273,170" />
-            <Node Bounds="396,303,85,22" Id="TKKCwpRSce5Pq9ZKpfNwFn">
-              <p:NodeReference LastCategoryFullName="VVVV.Value.Crius.Track" LastSymbolSource="VVVV.Value.Crius.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="RecordType" Name="Track" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
-              </p:NodeReference>
-              <Pin Id="STgDm0wmenONRzV6WnxbbF" Name="name" Kind="InputPin" />
-              <Pin Id="JEx230MpPmfM2Qla6EKcay" Name="id" Kind="InputPin" />
-              <Pin Id="QjMB7IeszHFL5PKAOTeqyZ" Name="folder" Kind="InputPin" />
-              <Pin Id="JfUuu9wVa8YQMiyD1WonGx" Name="bpm" Kind="InputPin" />
-              <Pin Id="CzwHaRTnyClNHYMVqKHVc0" Name="offset" Kind="InputPin" />
-              <Pin Id="PTc3gYn0ee8OL80Ah7nh8F" Name="FPS" Kind="InputPin" />
-              <Pin Id="PbSKCkLpAo3NJ2oysVrAeJ" Name="deck" Kind="InputPin" />
-              <Pin Id="QM6dATRwsYSPAs9GwsESYo" Name="transitionMode" Kind="InputPin" />
-              <Pin Id="VaS32kT1NEQNHvPt927S7O" Name="transitionTine" Kind="InputPin" />
-              <Pin Id="LbEUJ9nbF5vMbzmuExp06v" Name="lights" Kind="InputPin" />
-              <Pin Id="RLHd3anX78iMasJFyk7PgN" Name="Output" Kind="StateOutputPin" />
-            </Node>
-            <ControlPoint Id="PUf8oDZPLu9MJf4NjwNpdx" Bounds="394,170" />
-            <ControlPoint Id="CbvKwipw9rYLJav60nQMoN" Bounds="456,170" />
-            <ControlPoint Id="CykeK67j2faLDriQIN5XpZ" Bounds="530,170" />
-            <ControlPoint Id="PD6OBcvyBp7NjUsBJFsUz4" Bounds="602,170" />
-            <ControlPoint Id="LyknC7VPczNOFxgChsHRMo" Bounds="683,173" />
-            <ControlPoint Id="SmlCnGT0mdbQZirtwumhN3" Bounds="890,169" />
-            <ControlPoint Id="OIAOhgLPNKyPV2OVWp6pTD" Bounds="779,170" />
-            <ControlPoint Id="QApWUl397B1OBIgwGbN9eL" Bounds="220,170" />
-          </Canvas>
-          <Patch Id="EmSuO7xwSaFO2Ow0YOmSIc" Name="Create" />
-          <Patch Id="L3QvHNyVVkpQK3gUTTbWeS" Name="Update">
-            <Pin Id="VS48iYn48uDPjAiQy2XWN7" Name="name" Kind="InputPin" Bounds="204,175" />
-            <Pin Id="FArhlLT7Vd7MvhLuh9qLof" Name="id" Kind="InputPin" Bounds="644,141" />
-            <Pin Id="HiWuF7lm2m8M9GIHJ5nF7w" Name="folder" Kind="InputPin" Bounds="555,127" />
-            <Pin Id="EVyQNlETxdvNVTw9QEDSf7" Name="bpm" Kind="InputPin" Bounds="435,173" />
-            <Pin Id="IV9RQRVBbA2LqlM2gBOzbF" Name="Output" Kind="OutputPin" Bounds="530,490" />
-            <Pin Id="PTTTU0MMvNDMOBeOX1ZhKv" Name="offset" Kind="InputPin" Bounds="458,224" />
-            <Pin Id="LakJguGrghHLqXziQtIiTl" Name="FPS" Kind="InputPin" Bounds="477,195" />
-            <Pin Id="Btyaf1eOkyKMa5LInodv9N" Name="deck" Kind="InputPin" Bounds="498,252" />
-            <Pin Id="Pz8j4wwB7HzM1nMNawXG63" Name="transitionMode" Kind="InputPin" Bounds="683,173" DefaultValue="fadeInOut">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="MtUjxXsb4r4OvzhrlduqCO" Name="transitionTime" Kind="InputPin" Bounds="779,170" DefaultValue="2">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="GQvgtH4FuP1NbCHxXOp8g8" Name="lights" Kind="InputPin" Bounds="843,169" />
-          </Patch>
-          <ProcessDefinition Id="L9iiC7Cp1B3M9Kl7Whb36u">
-            <Fragment Id="NSNkXYRJY3GPuDGJKjcYDm" Patch="EmSuO7xwSaFO2Ow0YOmSIc" Enabled="true" />
-            <Fragment Id="ONvedrn4VBrPrG1VG6yaAB" Patch="L3QvHNyVVkpQK3gUTTbWeS" Enabled="true" />
-          </ProcessDefinition>
-          <Link Id="UGzy3wzKYZ4NVoJ0GIKOxi" Ids="HiWuF7lm2m8M9GIHJ5nF7w,DAlvSxmBgnXOmsXSWyERub" IsHidden="true" />
-          <Link Id="NK5wNvJC6KWNyAYXnxbzj2" Ids="LBiLb20yAhbOossCozYTYq,IV9RQRVBbA2LqlM2gBOzbF" IsHidden="true" />
-          <Link Id="PnWE2onT0hdOcsiAVovuOd" Ids="SVg1eAj3bFrPogZ74R1vEw,JEx230MpPmfM2Qla6EKcay" />
-          <Link Id="JKOJMW3MbIXM8zkvYrqa6U" Ids="FArhlLT7Vd7MvhLuh9qLof,SVg1eAj3bFrPogZ74R1vEw" IsHidden="true" />
-          <Link Id="U6gv3f1Aw04LctZRAm5ZTQ" Ids="RLHd3anX78iMasJFyk7PgN,LBiLb20yAhbOossCozYTYq" />
-          <Link Id="Biarbbv63BqLRf5wa5UufH" Ids="DAlvSxmBgnXOmsXSWyERub,QjMB7IeszHFL5PKAOTeqyZ" />
-          <Link Id="HWghAaUtLhIL7ivN3EXXNE" Ids="PUf8oDZPLu9MJf4NjwNpdx,JfUuu9wVa8YQMiyD1WonGx" />
-          <Link Id="DfwW8f5Ix6GPDswBzvWwpJ" Ids="EVyQNlETxdvNVTw9QEDSf7,PUf8oDZPLu9MJf4NjwNpdx" IsHidden="true" />
-          <Link Id="NUmIdAht2CKOd5DHWE0ZnG" Ids="CbvKwipw9rYLJav60nQMoN,CzwHaRTnyClNHYMVqKHVc0" />
-          <Link Id="UvlZBBgQeG9OI1jJdsQ4VD" Ids="PTTTU0MMvNDMOBeOX1ZhKv,CbvKwipw9rYLJav60nQMoN" IsHidden="true" />
-          <Link Id="HSEJPJunCShLivmSyfFg3H" Ids="CykeK67j2faLDriQIN5XpZ,PTc3gYn0ee8OL80Ah7nh8F" />
-          <Link Id="KSFJZ0CHUkaNfVfzCuqGEI" Ids="LakJguGrghHLqXziQtIiTl,CykeK67j2faLDriQIN5XpZ" IsHidden="true" />
-          <Link Id="HcrYQW5VgCjMnHL0BqIgnC" Ids="PD6OBcvyBp7NjUsBJFsUz4,PbSKCkLpAo3NJ2oysVrAeJ" />
-          <Link Id="Tr0MdLZwHVsNDRwZQFyvVn" Ids="Btyaf1eOkyKMa5LInodv9N,PD6OBcvyBp7NjUsBJFsUz4" IsHidden="true" />
-          <Link Id="U6f4DoHsN2yPnQCeu91QYw" Ids="LyknC7VPczNOFxgChsHRMo,QM6dATRwsYSPAs9GwsESYo" />
-          <Link Id="DGGr1TQfoJQQYG0IMt0fGC" Ids="Pz8j4wwB7HzM1nMNawXG63,LyknC7VPczNOFxgChsHRMo" IsHidden="true" />
-          <Link Id="UsEI3IE6gfXOkEd4uOh0gz" Ids="SmlCnGT0mdbQZirtwumhN3,LbEUJ9nbF5vMbzmuExp06v" />
-          <Link Id="KblS47eNs3pP59WvFhXhNy" Ids="GQvgtH4FuP1NbCHxXOp8g8,SmlCnGT0mdbQZirtwumhN3" IsHidden="true" />
-          <Link Id="RLo3rmsWJOuNfXlmY8V08s" Ids="OIAOhgLPNKyPV2OVWp6pTD,VaS32kT1NEQNHvPt927S7O" />
-          <Link Id="EvkpN1VRKA2Pj8FxsGqPJ0" Ids="MtUjxXsb4r4OvzhrlduqCO,OIAOhgLPNKyPV2OVWp6pTD" IsHidden="true" />
-          <Link Id="Az2Qda6iE4TMxiHIjcC8kg" Ids="QApWUl397B1OBIgwGbN9eL,STgDm0wmenONRzV6WnxbbF" />
-          <Link Id="QR0fjMHwmIOOn8f7Ax9zrP" Ids="VS48iYn48uDPjAiQy2XWN7,QApWUl397B1OBIgwGbN9eL" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
     ************************ Track ************************
 
 -->
-      <Node Name="Track" Category="VVVV.Value.Crius" Bounds="620,100" Id="PZo2QAVMeL3OAPZoAKBKhE">
+      <Node Name="Track" Category="VVVV.Value.Crius" Bounds="240,479" Id="PZo2QAVMeL3OAPZoAKBKhE">
         <p:NodeReference>
           <Choice Kind="RecordDefinition" Name="Record" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1222,10 +1130,10 @@
       </Node>
       <!--
 
-    ************************ Player ************************
+    ************************ Playlist ************************
 
 -->
-      <Node Name="Player" Category="VVVV.Value.Crius" Bounds="410,200" Id="IeZHek6OCfOPCpc5pALIzX">
+      <Node Name="Playlist" Category="VVVV.Value.Crius" Bounds="192,353" Id="IeZHek6OCfOPCpc5pALIzX">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1555,7 +1463,7 @@
     ************************ MixDecks ************************
 
 -->
-      <Node Name="MixDecks" Category="VVVV.Value.Crius" Bounds="200,300" Id="JR5t0aQxBCWQYQiMw52Hca">
+      <Node Name="MixDecks" Category="VVVV.Value.Crius" Bounds="442,436" Id="JR5t0aQxBCWQYQiMw52Hca">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1734,7 +1642,7 @@
     ************************ Deck ************************
 
 -->
-      <Node Name="Deck" Category="VVVV.Cirus" Bounds="620,300" Id="O5FQR6QSwlfM4iRpQhdCr9">
+      <Node Name="Deck" Category="VVVV.Cirus" Bounds="193,395" Id="O5FQR6QSwlfM4iRpQhdCr9">
         <p:NodeReference>
           <Choice Kind="RecordDefinition" Name="Record" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1957,7 +1865,7 @@
     ************************ Decks ************************
 
 -->
-      <Node Name="Decks" Bounds="200,400" Id="Is39wXZtJR8NlxJhDxchhL">
+      <Node Name="Decks" Bounds="192,435" Id="Is39wXZtJR8NlxJhDxchhL">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
