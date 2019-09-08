@@ -25,6 +25,7 @@
 - Get the midi RealTime commands (play, stop, continue, reset)
 
 **GetMidiInNote**
+- Just get the actual playing midi note(s)
 
 **KeyToNote**
 - Transcript Key (i.e. C#4) to an integer corresponding on this note
