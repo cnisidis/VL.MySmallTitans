@@ -54,10 +54,17 @@
 ## Phoebe
 
 (WIP)
-Simplistic UI to rule over the small titans
+*Simplistic UI to rule over the small titans*
 
 
 more to come...
+
+## Hyperion
+*Artnet/DMX Based on VL.Fixtures*
+
+## Rhea
+*Timeline visualizer Based on Hanlder
+
 
 
 
