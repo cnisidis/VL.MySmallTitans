@@ -319,11 +319,6 @@
             <Pin Id="Mf9VC40sokJN1hY29Jhezh" Name="Enable" Kind="InputPin" Bounds="828,133" />
             <Pin Id="UhuNcUvqdyQPxS8ORq6Ur3" Name="Reset" Kind="InputPin" Bounds="880,177" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="GLhaMuduBCvN8dvrydi2XT">
             <Fragment Id="ArPNENkCCRWNAzbPp7Wkti" Patch="LA8dfmGGjMlOm9lbIt7h8d" Enabled="true" />
             <Fragment Id="NA0cvC6TOKfNIxaBHzWyyP" Patch="AtdIoitYfMTP7yntsctvz1" Enabled="true" />

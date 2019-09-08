@@ -1,17 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\mySmallTitans\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="0" scrolly="0">
-   <NODE systemname="GetDeck (Cirus.Deck)" filename="vl\VVVV.Value.Crius.vl" nodename="GetDeck (Cirus.Deck)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1590" top="1980" width="1530" height="270">
-   </BOUNDS>
-   <PIN pinname="Deck" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="DeckName" slicecount="1" visible="1" values="B">
-   </PIN>
-   <PIN pinname="name" visible="1">
-   </PIN>
-   <PIN pinname="tracks" visible="1">
-   </PIN>
-   </NODE>
+   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\CriusExtension\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="1080" scrolly="-360">
    <NODE systemname="GetTrack (Value.Crius)" filename="vl\VVVV.Value.Crius.vl" nodename="GetTrack (Value.Crius)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2565" top="2655" width="100" height="100">
    </BOUNDS>
@@ -278,17 +266,11 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="0" dstpinname="Deck">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="0" dstpinname="DeckName">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="name" dstnodeid="4" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Former Slice" dstnodeid="4" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="1" dstpinname="Tracks">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Input String">
    </LINK>
@@ -320,7 +302,7 @@
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
    </LINK>
-   <BOUNDS type="Window" left="4815" top="10395" width="18795" height="10605">
+   <BOUNDS type="Window" left="6975" top="5400" width="18795" height="10605">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -359,7 +341,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12570" top="3705" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="6.25">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -479,9 +461,9 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="tracks">
    </PIN>
+   <PIN pinname="Input Node">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="33" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34">
    <BOUNDS type="Box" left="8355" top="7740" width="795" height="240">
    </BOUNDS>
@@ -539,7 +521,7 @@
    </PIN>
    <PIN pinname="isPlaying" visible="1">
    </PIN>
-   <PIN pinname="TRacks" visible="1">
+   <PIN pinname="TRacks" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="38" dstpinname="Deck">
@@ -561,8 +543,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="isPlaying" dstnodeid="40" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="38" dstpinname="TRacks">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41">
    <BOUNDS type="Box" left="7560" top="8520" width="795" height="480">
@@ -600,7 +580,7 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Format" dstnodeid="42" dstpinname="Input Enum">
    </LINK>
-   <NODE systemname="MidiSyncImagePlayer (Value.Iapetus)" filename="vl\VVVV.Value.MidiSyncTools.vl" nodename="MidiSyncImagePlayer (Value.Iapetus)" componentmode="Hidden" id="21">
+   <NODE systemname="MidiSyncImagePlayer (Value.Iapetus)" filename="vl\VVVV.Value.Iapetus.vl" nodename="MidiSyncImagePlayer (Value.Iapetus)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="7260" top="5895" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Time" visible="1" slicecount="1" values="6.25">
@@ -649,5 +629,25 @@
    <LINK srcnodeid="21" srcpinname="CurrentFrame" dstnodeid="34" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="35" srcpinname="Output" dstnodeid="21" dstpinname="Refresh">
+   </LINK>
+   <NODE id="0" systemname="GetDeck (Cirus.Deck)" filename="vl\VVVV.Value.Crius.vl" nodename="GetDeck (Cirus.Deck)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1590" top="1980" width="1530" height="270">
+   </BOUNDS>
+   <PIN pinname="Deck" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="DeckName" slicecount="1" visible="1" values="B">
+   </PIN>
+   <PIN pinname="name" visible="1">
+   </PIN>
+   <PIN pinname="tracks" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="38" dstpinname="TRacks">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="33" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="0" dstpinname="DeckName">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="0" dstpinname="Deck">
    </LINK>
    </PATCH>
