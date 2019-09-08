@@ -4,23 +4,23 @@
 
 Midi related toolkit, sync vvvv with your favorite DAW
 
-+MidiClockToSeconds
-+SecondsToTime
+-MidiClockToSeconds
+-SecondsToTime
 
-+MidiDeviceSelect 
+-MidiDeviceSelect 
 Select the midi port / device you want to get in sync with
-+MidiSyncDevice
+-MidiSyncDevice
 Get the actual Clock and Sysex commands from your Selected Midi Device
-+MidiSync
+-MidiSync
 Basic implementation of MidiClock (get position song)
-+MidiPlayStop
+-MidiPlayStop
 Get the midi RealTime commands (play, stop, continue, reset)
-+GetMidiInNote
-+KeyToNote
+-GetMidiInNote
+-KeyToNote
 Transcript Key (i.e. C#4) to an integer corresponding on this note
-+NoteToKey
+-NoteToKey
 The other way around of KeyToNote
-+MidiSyncImagePlayer
+-MidiSyncImagePlayer
 Load and play sequences in sync with your DAW
 
 
@@ -29,11 +29,11 @@ Load and play sequences in sync with your DAW
 Deck Managment System
 Name your decks, load your tracks and CUE them
 
-+Playlist
+-Playlist
 load the tracks and set the apropriate deck for each one
-+Decks
+-Decks
 Name your Decks and load you Playlist
-+Track
+-Track
 The actual track of you playlist 
 
 
