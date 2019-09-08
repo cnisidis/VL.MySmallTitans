@@ -2,7 +2,7 @@
 
 ## Iapetus
 
-Midi related toolkit, sync vvvv with your favorite DAW
+*Midi related toolkit, sync vvvv with your favorite DAW*
 
 **MidiClockToSeconds**
 
@@ -34,8 +34,7 @@ Midi related toolkit, sync vvvv with your favorite DAW
 
 ## Crius
 
-Basic deck Managment System
-- Name your decks, load your tracks and CUE them
+*Name your decks, load your tracks and CUE them*
 
 **Playlist**
 - load the tracks and set the apropriate deck for each one
