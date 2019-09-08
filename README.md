@@ -7,8 +7,10 @@
 *Midi related toolkit, sync vvvv with your favorite DAW*
 
 **MidiClockToSeconds**
+- Convert midiclock to Seconds 
 
 **SecondsToTime**
+- Convert seconds to Time Object (for better visualizing purpose)
 
 **MidiDeviceSelect**
 - Select the midi port/device you want to get in sync with
