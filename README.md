@@ -1,4 +1,6 @@
-# mySmallTitatans
+# mySmallTitans
+
+*Small Titans is a condensed but not that small collection of different VL tools for mangling with any kind of midi input (**Iapetus**) in order to control image sequence playback (**Crius**) or play with lights (**Hyperion** [upcoming]) and get control of everything with a timeline (**Rhea**) and a simplistic UI (**Phoebe**)* 
 
 ## Iapetus
 
