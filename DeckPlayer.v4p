@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\mySmallTitans\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\mySmallTitans\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="1080" scrolly="1440">
    <NODE systemname="GetDeck (Cirus.Deck)" filename="vl\VVVV.Value.Crius.vl" nodename="GetDeck (Cirus.Deck)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1590" top="1980" width="1530" height="270">
    </BOUNDS>
@@ -320,7 +320,7 @@
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
    </LINK>
-   <BOUNDS type="Window" left="4815" top="10395" width="18795" height="10605">
+   <BOUNDS type="Window" left="9705" top="3045" width="10410" height="7695">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -359,7 +359,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12570" top="3705" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="6.25">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -600,7 +600,7 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Format" dstnodeid="42" dstpinname="Input Enum">
    </LINK>
-   <NODE systemname="MidiSyncImagePlayer (Value.Iapetus)" filename="vl\VVVV.Value.MidiSyncTools.vl" nodename="MidiSyncImagePlayer (Value.Iapetus)" componentmode="Hidden" id="21">
+   <NODE systemname="MidiSyncImagePlayer (Value.Iapetus)" filename="vl\VVVV.Value.Iapetus.vl" nodename="MidiSyncImagePlayer (Value.Iapetus)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="7260" top="5895" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Time" visible="1" slicecount="1" values="6.25">
