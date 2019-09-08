@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="0" scrolly="-360">
+   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\mySmallTitans\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="0" scrolly="0">
    <NODE systemname="GetDeck (Cirus.Deck)" filename="vl\VVVV.Value.Crius.vl" nodename="GetDeck (Cirus.Deck)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1590" top="1980" width="1530" height="270">
    </BOUNDS>
@@ -229,6 +229,10 @@
    </PIN>
    <PIN pinname="No Mips" visible="1">
    </PIN>
+   <PIN pinname="SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Format" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="18" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="6765" top="7800" width="795" height="240">
@@ -271,6 +275,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1590" top="500" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="0" dstpinname="Deck">
    </LINK>
@@ -314,7 +320,7 @@
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
    </LINK>
-   <BOUNDS type="Window" left="1800" top="5340" width="18795" height="10605">
+   <BOUNDS type="Window" left="4815" top="10395" width="18795" height="10605">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -327,40 +333,6 @@
    <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="12" dstpinname="Switch">
-   </LINK>
-   <NODE systemname="MidiSyncImagePlayer (Value.Iapetus)" filename="vl\VVVV.Value.MidiSyncTools.vl" nodename="MidiSyncImagePlayer (Value.Iapetus)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="7260" top="5895" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Time" visible="1" slicecount="1" values="6.25">
-   </PIN>
-   <PIN pinname="Directory" visible="1" slicecount="1" values="..\..\__NIARXOS\vvvv_patches\number_7\dds\">
-   </PIN>
-   <PIN pinname="Refresh" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Result" visible="1">
-   </PIN>
-   <PIN pinname="FrameOffset" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Enable" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="CalculateFrameDifference" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Duration" visible="1">
-   </PIN>
-   <PIN pinname="LastPosition" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Value" visible="1">
-   </PIN>
-   <PIN pinname="CurrentFrame" visible="1">
-   </PIN>
-   <PIN pinname="FPS" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Result" dstnodeid="17" dstpinname="Filename">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
    <BOUNDS type="Box" left="11325" top="3705" width="480" height="480">
@@ -382,8 +354,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="21" dstpinname="CalculateFrameDifference">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23">
    <BOUNDS type="Box" left="12570" top="3705" width="795" height="240">
    </BOUNDS>
@@ -398,8 +368,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Time">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Time">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24">
    <BOUNDS type="Box" left="13590" top="3705" width="795" height="240">
    </BOUNDS>
@@ -414,8 +382,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="FPS">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="21" dstpinname="FPS">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25">
    <BOUNDS type="Box" left="14700" top="3705" width="795" height="240">
    </BOUNDS>
@@ -432,8 +398,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="FrameOffset">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="21" dstpinname="FrameOffset">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
    <BOUNDS type="Box" left="16605" top="3600" width="480" height="480">
    </BOUNDS>
@@ -453,6 +417,8 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="29">
    <BOUNDS type="Node" left="7485" top="5115" width="100" height="100">
@@ -462,14 +428,6 @@
    <PIN pinname="Input" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="29" srcpinname="Up Edge" dstnodeid="21" dstpinname="Refresh">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="29" dstpinname="Input" linkstyle="Bezier">
-   <LINKPOINT x="6825" y="4403">
-   </LINKPOINT>
-   <LINKPOINT x="7500" y="4403">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="9795" top="3585" width="100" height="100">
    </BOUNDS>
@@ -514,10 +472,6 @@
    </LINK>
    <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="21" dstpinname="Reset">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="21" dstpinname="Enable">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="33">
    <BOUNDS type="Box" left="255" top="3630" width="795" height="240">
    </BOUNDS>
@@ -527,5 +481,173 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="33" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34">
+   <BOUNDS type="Box" left="8355" top="7740" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8355" top="7740" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="CurrentFrame">
+   </PIN>
+   </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="7485" top="5520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="36">
+   <BOUNDS type="Box" left="7800" top="2505" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7800" top="2505" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Refresh">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="29" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Up Edge" dstnodeid="35" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="PlayingTrack (Cirus.Deck)" filename="vl\VVVV.Value.Crius.vl" nodename="PlayingTrack (Cirus.Deck)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="4305" top="2190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Deck" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="isPlaying" visible="1">
+   </PIN>
+   <PIN pinname="TRacks" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="38" dstpinname="Deck">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40">
+   <BOUNDS type="Box" left="4260" top="7125" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4260" top="7125" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DeckArmed">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="isPlaying" dstnodeid="40" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="tracks" dstnodeid="38" dstpinname="TRacks">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41">
+   <BOUNDS type="Box" left="7560" top="8520" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7560" top="8520" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="SizeXY">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="SizeXY" dstnodeid="41" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="42">
+   <BOUNDS type="Box" left="7785" top="7440" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7785" top="7440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="Unknown">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Format">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Format" dstnodeid="42" dstpinname="Input Enum">
+   </LINK>
+   <NODE systemname="MidiSyncImagePlayer (Value.Iapetus)" filename="vl\VVVV.Value.MidiSyncTools.vl" nodename="MidiSyncImagePlayer (Value.Iapetus)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="7260" top="5895" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1" slicecount="1" values="6.25">
+   </PIN>
+   <PIN pinname="Directory" visible="1" slicecount="1" values="..\..\__NIARXOS\vvvv_patches\number_7\dds\">
+   </PIN>
+   <PIN pinname="Refresh" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   <PIN pinname="FrameOffset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Enable" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="CalculateFrameDifference" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Duration" visible="1">
+   </PIN>
+   <PIN pinname="LastPosition" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="CurrentFrame" visible="1">
+   </PIN>
+   <PIN pinname="FPS" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Result" dstnodeid="17" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="21" dstpinname="CalculateFrameDifference">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Time">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="21" dstpinname="FPS">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="21" dstpinname="FrameOffset">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="21" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="21" dstpinname="Enable">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="CurrentFrame" dstnodeid="34" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="21" dstpinname="Refresh">
    </LINK>
    </PATCH>

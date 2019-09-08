@@ -1836,6 +1836,69 @@
             </Pad>
             <ControlPoint Id="GJELJEf6bKIO7stnRGWT4N" Bounds="638,231" />
             <ControlPoint Id="E0APdWprEtSMGCXyZxw8JT" Bounds="638,291" />
+            <!--
+
+    ************************ PlayingTrack ************************
+
+-->
+            <Node Name="PlayingTrack" Bounds="871,710,331,294" Id="C32YkI1h1E6M2N8whpnt0p">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Patch Id="D3PmCs1rhoaMguWcIb39GH">
+                <ControlPoint Id="M5sdNQfSr7xMyBTkIk5SpY" Bounds="1142,985" />
+                <Link Id="GRHI2sEqJRUMT3LRGD8Fpl" Ids="M5sdNQfSr7xMyBTkIk5SpY,Q5RT03fJhSfNdB3ajZEySN" IsHidden="true" />
+                <Node Bounds="927,740,258,129" Id="BN9lW7lsIjYQGAAfC1mFBI">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="BYP49YZU9RILRLWKald9BM" Name="Break" Kind="OutputPin" />
+                  <Patch Id="UeNyvtMin9VMze3QBCs7C8" ManuallySortedPins="true">
+                    <Patch Id="Ot6oIWklF5SO4XyduLhCQd" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="TU72qbK5MltP12xbzLao7Y" Name="Update" ManuallySortedPins="true">
+                      <Pin Id="OyKfXKB4XXIMYVHPsespm1" Name="Keep" Kind="OutputPin" />
+                    </Patch>
+                    <Patch Id="O8RX9Ds115zQHWxcMPiWll" Name="Dispose" ManuallySortedPins="true" />
+                    <Node Bounds="940,776,225,22" Id="UpG6yRWplykPHY2y5Pc48Q">
+                      <p:NodeReference LastCategoryFullName="VVVV.Value.Crius.Track" LastSymbolSource="VVVV.Value.Crius.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="RecordType" Name="Track" />
+                        <Choice Kind="OperationCallFlag" Name="Split" />
+                      </p:NodeReference>
+                      <Pin Id="OJuThGdjXqMLroSTjKs38n" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="JVP7YUJyJNAQILKd0OwZdm" Name="name" Kind="OutputPin" />
+                      <Pin Id="OvjKAmwHobQMuV5NOwCpTy" Name="id" Kind="OutputPin" />
+                      <Pin Id="CCPUVwnajLqLamCz6fi2yP" Name="folder" Kind="OutputPin" />
+                      <Pin Id="Q05yQQTewRpM3GNyo7mQqJ" Name="bpm" Kind="OutputPin" />
+                      <Pin Id="MCVMX9bqNKqNT6pvrxdbUO" Name="offset" Kind="OutputPin" />
+                      <Pin Id="CEot7ERZFVPPpQcF43wOxT" Name="FPS" Kind="OutputPin" />
+                      <Pin Id="LUk2n8beDqQMRw4HRwgRKs" Name="deck" Kind="OutputPin" />
+                      <Pin Id="CuqsFEYlrjPPxIZJHeS5x7" Name="transitionMode" Kind="OutputPin" />
+                      <Pin Id="FnRByh1XBTvP0eJ376Yo7l" Name="transitionTine" Kind="OutputPin" />
+                      <Pin Id="AUAbJBUhIaKLQ1sTMOvsUc" Name="lights" Kind="OutputPin" />
+                      <Pin Id="B3OEe1rC2gpLUPicqkWZiW" Name="isPlaying" Kind="OutputPin" />
+                      <Pin Id="VxN7LitT32gOnkPcoOqPk9" Name="index" Kind="OutputPin" />
+                    </Node>
+                    <ControlPoint Id="CZBqxVTlbmDPzxhl1VRzul" Bounds="1142,833" />
+                  </Patch>
+                  <ControlPoint Id="Aou5bk9NePINJaEzvKA3dT" Bounds="942,746" Alignment="Top" />
+                  <ControlPoint Id="CXjmmiisJRIQKjLKtCR70I" Bounds="1142,863" Alignment="Bottom" />
+                </Node>
+                <Link Id="L9gStBYrP46LbM7QiYUMAA" Ids="Aou5bk9NePINJaEzvKA3dT,OJuThGdjXqMLroSTjKs38n" />
+                <Link Id="EDOV5XfseWSO5S7gJII64K" Ids="CZBqxVTlbmDPzxhl1VRzul,OyKfXKB4XXIMYVHPsespm1" IsHidden="true" />
+                <Link Id="Tg4xA6PcUPFOj6IwHlUnLr" Ids="B3OEe1rC2gpLUPicqkWZiW,CZBqxVTlbmDPzxhl1VRzul" />
+                <Link Id="UizLkqsZG5mMegZjUc1vKH" Ids="B3OEe1rC2gpLUPicqkWZiW,CXjmmiisJRIQKjLKtCR70I" />
+                <Link Id="NlmYVsPLoV3MBy3TN4Qoyv" Ids="CXjmmiisJRIQKjLKtCR70I,M5sdNQfSr7xMyBTkIk5SpY" />
+                <ControlPoint Id="DvUQHMgoJuAMLeldndwo1y" Bounds="908,726" />
+                <Link Id="NjDySlwEKJ1Nko1NbOHluy" Ids="DvUQHMgoJuAMLeldndwo1y,Aou5bk9NePINJaEzvKA3dT" />
+                <Link Id="LoYBc763XDpNRm8y7t1fRp" Ids="QsetMOjMXWAMhcVniCTIEE,DvUQHMgoJuAMLeldndwo1y" IsHidden="true" />
+                <Pin Id="QsetMOjMXWAMhcVniCTIEE" Name="TRacks" Kind="InputPin" Bounds="908,726" />
+                <Pin Id="Q5RT03fJhSfNdB3ajZEySN" Name="isPlaying" Kind="OutputPin" Bounds="1106,984" />
+              </Patch>
+            </Node>
           </Canvas>
           <Patch Id="H1zARl1BINfMvfGDdpa6D2" Name="Create">
             <Pin Id="I26OfWX1qDkMXV92BLMM5B" Name="name" Kind="InputPin">
@@ -1865,6 +1928,7 @@
             <Fragment Id="RLglfGvQUphN0vaORS734L" Patch="LzxXHLQFBKlPP67WSW1kjg" Enabled="true" />
             <Fragment Id="CIQVriCLy8xOkJHA1T0XBv" Patch="DB3GLmZ9PJwO6zhh8gRp6r" Enabled="true" />
             <Fragment Id="UDs1EDLxf32LoH9lo0GOtq" Patch="Nq2k4OBiZ4XNyhSABC24aZ" />
+            <Fragment Id="FSJYFg5rhaHPC6HaRz9Q6m" Patch="C32YkI1h1E6M2N8whpnt0p" />
           </ProcessDefinition>
           <Slot Id="TbTijjOSQR4NjDzMDz2yZp" Name="name" />
           <Patch Id="DB3GLmZ9PJwO6zhh8gRp6r" Name="Split">
