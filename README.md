@@ -63,7 +63,7 @@ more to come...
 *Artnet/DMX Based on VL.Fixtures*
 
 ## Rhea
-*Timeline visualizer Based on Hanlder
+*Timeline: Track / Clip Visualizer (extended by Handler)
 
 
 

@@ -1151,7 +1151,7 @@
             <ControlPoint Id="QiJgTYhyULGLjo4uTfnzK7" Bounds="963,-254" />
             <ControlPoint Id="HmkKxyBRP3xPCjCvNddNoI" Bounds="1076,-253" />
             <ControlPoint Id="J7JIdBZXeYFLF6H26GEszV" Bounds="1108,-148" />
-            <Node Bounds="552,-103,611,513" Id="DIU6cHAyjEsNZA1vSsmvIs">
+            <Node Bounds="553,-103,609,513" Id="DIU6cHAyjEsNZA1vSsmvIs">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
@@ -1182,7 +1182,7 @@
                   <Pin Id="Rbq3TNPvIZJL4D08s7LxlQ" Name="lights" Kind="InputPin" />
                   <Pin Id="L8VzQj1k6xqMP4HPcYSgXc" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="608,51,68,87" Id="ErmQ1x8FwLrOZK0Kk45TqQ">
+                <Node Bounds="609,51,66,87" Id="ErmQ1x8FwLrOZK0Kk45TqQ">
                   <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
@@ -1193,7 +1193,7 @@
                     <Patch Id="T7IKAZCYzVhNMqSn1NcD3F" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="EyxGzmZ1cgtPa0BNUNp1i3" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="Lglt1BZ2n6iQWhJsO0hTFT" Name="Dispose" ManuallySortedPins="true" />
-                    <Node Bounds="620,95,25,13" Id="FKEYTU28mYZNtw3GdTcmJY">
+                    <Node Bounds="622,88,25,13" Id="FKEYTU28mYZNtw3GdTcmJY">
                       <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="=" />
@@ -1206,7 +1206,7 @@
                   <ControlPoint Id="MeDSZ7DenjWPLokQsWi0sC" Bounds="650,57" Alignment="Top" />
                   <ControlPoint Id="I6WamtugMmqNEovbe5JdAV" Bounds="624,132" Alignment="Bottom" />
                 </Node>
-                <Node Bounds="651,188,43,22" Id="FuU19YcxunhM96LSrT11oU">
+                <Node Bounds="625,200,43,22" Id="FuU19YcxunhM96LSrT11oU">
                   <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="OR (Spectral)" />
@@ -1246,6 +1246,28 @@
                   <Pin Id="Se7TeH5daplQAWyTyRtFMB" Name="index" Kind="OutputPin" />
                 </Node>
                 <ControlPoint Id="V42BuLht02ZP9MWP5KxEXr" Bounds="1116,-39" />
+                <Node Bounds="747,57,25,13" Id="I7Vw5xkNN6XOmxqVTiUFap">
+                  <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="=" />
+                  </p:NodeReference>
+                  <Pin Id="Ru8pLsc9oIbN9tjHGnneIA" Name="Input" Kind="InputPin" />
+                  <Pin Id="R1WbvVnyJbbNfSz9CLpBvp" Name="Input 2" Kind="InputPin" DefaultValue="FadeInOut">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="String" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Pin Id="JreJBMcncpkNgdpyEHrLyP" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="722,238,30,13" Id="KLZAroK3DfWLbGmDACApE6">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="AND" />
+                  </p:NodeReference>
+                  <Pin Id="HAGGX1BUoVCN2d4vUesSYx" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="SJ3O9wWFVvgO95dlcLszV7" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="RTQA5zFdmmsOIKqCtlP2H1" Name="Output" Kind="StateOutputPin" />
+                </Node>
               </Patch>
               <ControlPoint Id="ClkOgX3qOLlQIQl9OQd1kg" Bounds="606,-97" Alignment="Top" />
               <ControlPoint Id="Igo047085F0MfKT41FpGRS" Bounds="661,-97" Alignment="Top" />
@@ -1456,6 +1478,9 @@
           <Link Id="QLueYGEwc9RN3Yi6NWgDAL" Ids="RCdY2aQ5bvDM8Mgf6TFhgX,AnNF6vUFhW4Lez3Sii1qOy" IsHidden="true" />
           <Link Id="NXEWbCKsuHZMgctC2q0EWb" Ids="FKfZVVkSwsKNvmAFZ4M4jG,V42BuLht02ZP9MWP5KxEXr" IsHidden="true" />
           <Link Id="QhGAvf9o1UnMsahMLqbrQ9" Ids="V42BuLht02ZP9MWP5KxEXr,JhpZtWC9x7CNJm744WCAbN" />
+          <Link Id="QyX4zkqxJgIM9BWpSJaKBX" Ids="T6QGbVqK8YZOAm4Pbbmmmb,Ru8pLsc9oIbN9tjHGnneIA" />
+          <Link Id="SAeDLaJPa01Pn4HxkAUMSU" Ids="JreJBMcncpkNgdpyEHrLyP,SJ3O9wWFVvgO95dlcLszV7" />
+          <Link Id="CcaqZUg9wPOPdD1uBOmUX7" Ids="UxQyvsVvZ5BN7nMvx0l2kv,HAGGX1BUoVCN2d4vUesSYx" />
         </Patch>
       </Node>
       <!--

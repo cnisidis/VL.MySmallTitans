@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\CriusExtension\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="4215" scrolly="2160">
+   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\CriusExtension\DeckPlayer.v4p" systemname="DeckPlayer" filename="G:\Projects\mySmallTitatans\DeckPlayer.v4p" scrollx="105" scrolly="3390">
    <NODE systemname="GetTrack (Value.Crius)" filename="..\vl\VVVV.Value.Crius.vl" nodename="GetTrack (Value.Crius)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2565" top="2655" width="100" height="100">
    </BOUNDS>
