@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\Rhea (help).v4p" systemname="Rhea (help)" filename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\Rhea (help).v4p" scrollx="0" scrolly="495">
+   <PATCH nodename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\girlpower\Rhea (help).v4p" systemname="Rhea (help)" filename="G:\Projects\ImageSequenceMidiBasedPlayer\VL.MySmallTitans\Rhea (help).v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="675" top="540" width="13635" height="11265">
    </BOUNDS>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
@@ -34,20 +34,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="RheaClip (Value)" filename="vl\VVVV.Value.Rhea.vl" nodename="RheaClip (Value)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="4605" top="3765" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="RheaClip" visible="1">
-   </PIN>
-   <PIN pinname="name" visible="1">
-   </PIN>
-   <PIN pinname="color" visible="1">
-   </PIN>
-   <PIN pinname="StartEndXY" visible="1">
-   </PIN>
-   <PIN pinname="StartEndFrameXY" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="4590" top="2160" width="100" height="100">
    </BOUNDS>
@@ -60,10 +46,6 @@
    <PIN pinname="Input String" slicecount="4" values="|clip 00|,|clip 01|,|clip 02|,|clip 03|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="8" dstpinname="name">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="color">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
    <BOUNDS type="Node" left="6255" top="1965" width="100" height="100">
    </BOUNDS>
@@ -82,44 +64,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="StartEndFrameXY">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="8" dstpinname="StartEndXY">
-   </LINK>
-   <NODE systemname="RheaTrack (Value)" filename="vl\VVVV.Value.Rhea.vl" nodename="RheaTrack (Value)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3945" top="4455" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="clips" visible="1">
-   </PIN>
-   <PIN pinname="name" slicecount="1" values="|Track 00|">
-   </PIN>
-   <PIN pinname="RheaTrack" visible="1">
-   </PIN>
-   <PIN pinname="color" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="RheaClip" dstnodeid="13" dstpinname="clips">
-   </LINK>
-   <NODE systemname="DisplayClips (Value.Rhea)" filename="vl\VVVV.Value.Rhea.vl" nodename="DisplayClips (Value.Rhea)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="3945" top="5790" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Tracks" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="TotalFrames" slicecount="1" values="1000" visible="1">
-   </PIN>
-   <PIN pinname="name" visible="1">
-   </PIN>
-   <PIN pinname="color" visible="1">
-   </PIN>
-   <PIN pinname="PosX" visible="1">
-   </PIN>
-   <PIN pinname="ScaleX" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="HeightFactor" slicecount="1" values="0.0500000007450581">
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="16">
@@ -154,8 +98,6 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="16" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="color" dstnodeid="16" dstpinname="Color">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
    <BOUNDS type="Box" left="5415" top="5370" width="795" height="240">
    </BOUNDS>
@@ -172,14 +114,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="14" dstpinname="TotalFrames">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="8" dstpinname="StartEndFrameXY">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="PosX" dstnodeid="17" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="ScaleX" dstnodeid="17" dstpinname="ScaleX">
-   </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="23">
    <BOUNDS type="Box" left="4290" top="1080" width="750" height="465">
    </BOUNDS>
@@ -190,50 +124,6 @@
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Color Output" dstnodeid="13" dstpinname="color">
-   </LINK>
-   <NODE systemname="Cons (Value.Rhea)" filename="vl\VVVV.Value.Rhea.vl" nodename="Cons (Value.Rhea)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="3960" top="5325" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="I" visible="1">
-   </PIN>
-   <PIN pinname="II" visible="1">
-   </PIN>
-   <PIN pinname="Track II" visible="1">
-   </PIN>
-   <PIN pinname="Track I" visible="1">
-   </PIN>
-   <PIN pinname="Result" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="13" srcpinname="RheaTrack" dstnodeid="25" dstpinname="I">
-   </LINK>
-   <NODE systemname="RheaTrack (Value)" filename="vl\VVVV.Value.Rhea.vl" nodename="RheaTrack (Value)" componentmode="Hidden" id="26">
-   <BOUNDS type="Node" left="8655" top="4395" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="clips" visible="1">
-   </PIN>
-   <PIN pinname="name" slicecount="1" values="|Track 01|">
-   </PIN>
-   <PIN pinname="RheaTrack" visible="1">
-   </PIN>
-   <PIN pinname="color" visible="1" slicecount="1" values="|0.99500,0.37850,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="RheaTrack" dstnodeid="25" dstpinname="II">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="RheaTrack" dstnodeid="25" dstpinname="Track II" linkstyle="Bezier">
-   <LINKPOINT x="8655" y="4980">
-   </LINKPOINT>
-   <LINKPOINT x="4650" y="4980">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="RheaTrack" dstnodeid="25" dstpinname="Track I">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Result" dstnodeid="14" dstpinname="Tracks">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="27">
    <BOUNDS type="Node" left="9660" top="1890" width="100" height="100">
    </BOUNDS>
@@ -254,24 +144,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="StartEndFrameXY">
    </PIN>
    </NODE>
-   <NODE systemname="RheaClip (Value)" filename="vl\VVVV.Value.Rhea.vl" nodename="RheaClip (Value)" componentmode="Hidden" id="28">
-   <BOUNDS type="Node" left="9300" top="3825" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="RheaClip" visible="1">
-   </PIN>
-   <PIN pinname="name" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="color" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="StartEndXY" visible="1">
-   </PIN>
-   <PIN pinname="StartEndFrameXY" visible="1" slicecount="2" values="0,0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="28" srcpinname="RheaClip" dstnodeid="26" dstpinname="clips">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="28" dstpinname="StartEndFrameXY">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="5835" top="6480" width="100" height="100">
    </BOUNDS>
@@ -282,8 +154,6 @@
    <PIN pinname="Input 2" slicecount="1" visible="1" values="0.03">
    </PIN>
    </NODE>
-   <LINK srcnodeid="14" srcpinname="Y" dstnodeid="31" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32">
    <BOUNDS type="Box" left="6105" top="6180" width="795" height="240">
    </BOUNDS>
@@ -297,8 +167,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="31" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Y" dstnodeid="17" dstpinname="TranslateY">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="33">
    <BOUNDS type="Node" left="3090" top="8355" width="100" height="100">
@@ -321,7 +189,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="10" visible="1">
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Width" slicecount="1" values="2">
    </PIN>
@@ -546,6 +414,138 @@
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.99500,0.37850,0.00000,1.00000|">
    </PIN>
    </NODE>
+   <NODE systemname="RheaClip (Value)" filename="..\vl\VVVV.Value.Rhea.vl" nodename="RheaClip (Value)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4605" top="3765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="RheaClip" visible="1">
+   </PIN>
+   <PIN pinname="name" visible="1">
+   </PIN>
+   <PIN pinname="color" visible="1">
+   </PIN>
+   <PIN pinname="StartEndXY" visible="1">
+   </PIN>
+   <PIN pinname="StartEndFrameXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="8" dstpinname="name">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="color">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="8" dstpinname="StartEndXY">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="8" dstpinname="StartEndFrameXY">
+   </LINK>
+   <NODE systemname="RheaTrack (Value)" filename="..\vl\VVVV.Value.Rhea.vl" nodename="RheaTrack (Value)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3945" top="4455" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="clips" visible="1">
+   </PIN>
+   <PIN pinname="name" slicecount="1" values="|Track 00|">
+   </PIN>
+   <PIN pinname="RheaTrack" visible="1">
+   </PIN>
+   <PIN pinname="color" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Color Output" dstnodeid="13" dstpinname="color">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="RheaClip" dstnodeid="13" dstpinname="clips">
+   </LINK>
+   <NODE systemname="DisplayClips (Value.Rhea)" filename="..\vl\VVVV.Value.Rhea.vl" nodename="DisplayClips (Value.Rhea)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="3945" top="5790" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Tracks" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="TotalFrames" slicecount="1" visible="1" values="1000">
+   </PIN>
+   <PIN pinname="name" visible="1">
+   </PIN>
+   <PIN pinname="color" visible="1">
+   </PIN>
+   <PIN pinname="PosX" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="HeightFactor" slicecount="1" values="0.0500000007450581">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="color" dstnodeid="16" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="14" dstpinname="TotalFrames">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="PosX" dstnodeid="17" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="ScaleX" dstnodeid="17" dstpinname="ScaleX">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y" dstnodeid="17" dstpinname="TranslateY">
+   </LINK>
+   <NODE systemname="Cons (Value.Rhea)" filename="..\vl\VVVV.Value.Rhea.vl" nodename="Cons (Value.Rhea)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="3960" top="5325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="I" visible="1">
+   </PIN>
+   <PIN pinname="II" visible="1">
+   </PIN>
+   <PIN pinname="Track II" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Track I" visible="1">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="RheaTrack" dstnodeid="25" dstpinname="I">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="RheaTrack" dstnodeid="25" dstpinname="Track I">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Result" dstnodeid="14" dstpinname="Tracks">
+   </LINK>
+   <NODE systemname="RheaTrack (Value)" filename="..\vl\VVVV.Value.Rhea.vl" nodename="RheaTrack (Value)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="8655" top="4395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="clips" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="name" slicecount="1" values="|Track 01|">
+   </PIN>
+   <PIN pinname="RheaTrack" visible="1">
+   </PIN>
+   <PIN pinname="color" visible="1" slicecount="1" values="|0.99500,0.37850,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
    <LINK srcnodeid="49" srcpinname="Color Output" dstnodeid="26" dstpinname="color">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="RheaTrack" dstnodeid="25" dstpinname="II">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="RheaTrack" dstnodeid="25" dstpinname="Track II" linkstyle="Bezier">
+   <LINKPOINT x="8655" y="4980">
+   </LINKPOINT>
+   <LINKPOINT x="4650" y="4980">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="RheaClip (Value)" filename="..\vl\VVVV.Value.Rhea.vl" nodename="RheaClip (Value)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="9300" top="3825" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="RheaClip" visible="1">
+   </PIN>
+   <PIN pinname="name" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="color" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="StartEndXY" visible="1">
+   </PIN>
+   <PIN pinname="StartEndFrameXY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="28" dstpinname="StartEndFrameXY">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="RheaClip" dstnodeid="26" dstpinname="clips">
    </LINK>
    </PATCH>
