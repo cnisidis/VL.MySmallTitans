@@ -1,0 +1,123 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\vvvv\vvvv50\vvvv_50beta38.1_x64\packs\VL.MySmallTitans\nodes\modules\IapetusExtension\MidiOut (Iapetus).v4p" scrollx="0" scrolly="360" systemname="MidiOut (Iapetus)" filename="C:\vvvv\vvvv50\vvvv_50beta38.1_x64\packs\VL.MySmallTitans\nodes\modules\IapetusExtension\MidiOut (Iapetus).v4p">
+   <BOUNDS type="Window" left="13920" top="7875" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="MidiOutDevice (Value.Iapetus)" filename="%VVVV%\packs\VL.MySmallTitans\nodes\vl\VVVV.Value.Iapetus.vl" nodename="MidiOutDevice (Value.Iapetus)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1575" top="1905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="AvailableDevices" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="SelectedDevice" visible="1">
+   </PIN>
+   <PIN pinname="Is Open" visible="1">
+   </PIN>
+   <PIN pinname="Messages" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="2" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="1590" top="660" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1590" top="660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|loopMIDI Port|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="UA-25EX">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="MidiDevice">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations Explicit)" nodename="Enum2Ord (Enumerations Explicit)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1575" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enumeration" slicecount="1" values="Iapetus.Midi.Out">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output Enum" dstnodeid="1" dstpinname="Enum">
+   </LINK>
+   <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1890" top="3015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum Name" slicecount="1" values="Iapetus.Midi.Out">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Iapetus.Midi.Out">
+   </PIN>
+   <PIN pinname="Strings" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="AvailableDevices" dstnodeid="3" dstpinname="Strings">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Ord Value" dstnodeid="0" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1590" top="3945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1590" top="3945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="SelectedDevice">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="SelectedDevice" dstnodeid="4" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2490" top="4620" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2490" top="4620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Is Open|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Is Open" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="6" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="4005" top="1035" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4005" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Messages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="0" dstpinname="Messages" linkstyle="Bezier">
+   <LINKPOINT x="4005" y="1575">
+   </LINKPOINT>
+   <LINKPOINT x="2850" y="1575">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="dx11-vvvv-girlpower" Version="33.0">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   </PATCH>

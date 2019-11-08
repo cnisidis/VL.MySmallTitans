@@ -1,0 +1,79 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\vvvv\vvvv50\vvvv_50beta38.1_x64\packs\VL.MySmallTitans\nodes\modules\IapetusExtension\MidiIn (Iapetus).v4p" systemname="MidiIn" filename="C:\vvvv\vvvv50\vvvv_50beta38.1_x64\packs\VL.MySmallTitans\nodes\modules\IapetusExtension\MidiIn.v4p">
+   <BOUNDS type="Window" left="9900" top="6000" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2190" top="3315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Strings" visible="1" slicecount="3" values="UA-25EX,|loopMIDI Port|,|loopMIDI Port 1|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Iapetus.Midi.In">
+   </PIN>
+   <PIN pinname="Enum Name" slicecount="1" values="Iapetus.Midi.In">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="6" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="1995" top="1185" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1995" top="1185" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|loopMIDI Port|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="UA-25EX">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="MidiDevice">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations Explicit)" nodename="Enum2Ord (Enumerations Explicit)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1980" top="1815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enumeration" slicecount="1" values="Iapetus.Midi.In">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output Enum" dstnodeid="8" dstpinname="Enum">
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="dx11-vvvv-girlpower" Version="33.0">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   <NODE systemname="MidiSyncDevice (Value.Iapetus)" filename="%VVVV%\packs\VL.MySmallTitans\nodes\vl\VVVV.Value.Iapetus.vl" nodename="MidiSyncDevice (Value.Iapetus)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="1995" top="2415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   <PIN pinname="AvailableDevices" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Ord Value" dstnodeid="12" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="13">
+   <BOUNDS type="Box" left="3090" top="4350" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3090" top="4350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="MidiIn">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Result" dstnodeid="13" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="AvailableDevices" dstnodeid="3" dstpinname="Strings">
+   </LINK>
+   </PATCH>
